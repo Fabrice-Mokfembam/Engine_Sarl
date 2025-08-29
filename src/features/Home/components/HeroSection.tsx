@@ -1,5 +1,5 @@
 import React from 'react';
-import { bannerImage1 ,bannerImage2,bannerImage3,bannerImage4} from '../../../assets/images';
+import { bannerImage3 } from '../../../assets/images';
 
 
 

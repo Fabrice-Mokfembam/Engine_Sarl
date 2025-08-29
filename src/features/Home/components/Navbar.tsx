@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
               <Sun className="lucide lucide-sun" />
             )}
           </button>
-          <button className="bg-[#0056D2] text-white px-4 py-2  hover:bg-blue-700 transition duration-300">Contact Us</button>
+          <Link to={'/contact'} className="bg-[#0056D2] text-white px-4 py-2  hover:bg-blue-700 transition duration-300">Contact Us</Link>
         </div>
 
         {/* Mobile Menu Button */}
