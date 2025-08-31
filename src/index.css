@@ -4,16 +4,40 @@
   --color-primary: #0056D2;
   --color-secondary: #D72638;
   --color-accent: #FF7A00;
-  --color-background: #F5F7FA;
+  --color-background: var(--color-primary);
   --color-text: #1f1f1f;
 }
 
-html.dark {
-  --color-background: #000000;
-}
+
 
 *{
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 10s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

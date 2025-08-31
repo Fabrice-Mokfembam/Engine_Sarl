@@ -3,7 +3,7 @@ import React from 'react';
 const GalleryPage: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-primary-blue mb-8 text-center">Our Visual Journey: Engine SARL Gallery</h1>
+      <h1 className="text-4xl font-bold text-primary mb-8 text-center">Our Visual Journey: Engine SARL Gallery</h1>
 
       <p className="text-lg text-neutral-darker-gray text-center mb-12">
         Explore our collection of images and videos showcasing our products, facilities, events, and the people behind Engine SARL.
@@ -115,7 +115,7 @@ const GalleryPage: React.FC = () => {
             <img
               src="/path/to/facebook-icon.svg"
               alt="Facebook Icon"
-              className="w-10 h-10 text-primary-blue hover:text-accent-orange transition duration-300"
+              className="w-10 h-10 text-primary-blue hover:text-accent transition duration-300"
             />
           </a>
           <a href="#" target="_blank" rel="noopener noreferrer">
