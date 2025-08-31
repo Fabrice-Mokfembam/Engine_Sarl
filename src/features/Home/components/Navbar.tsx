@@ -16,6 +16,7 @@ const Navbar: React.FC = () => {
     } else {
       document.documentElement.classList.remove('dark');
     }
+    console.log('Current theme:', language);
   }, [theme]);
 
   const handleLanguageChange = (lang: string) => {

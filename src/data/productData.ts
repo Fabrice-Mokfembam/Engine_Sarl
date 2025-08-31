@@ -1,4 +1,4 @@
-import { modelcontainer1 } from "../assets/images";
+import  modelcontainer1  from "../assets/images/en1.jpeg";
 
 export const productsData = [
   {

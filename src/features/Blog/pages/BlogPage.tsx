@@ -14,8 +14,7 @@ const BlogPage: React.FC = () => {
   // Filter posts based on search, category, and tag
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = searchQuery === '' || 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) 
     
     const matchesCategory = selectedCategory === null || post.category === selectedCategory;
     const matchesTag = selectedTag === null || post.tags.includes(selectedTag);
