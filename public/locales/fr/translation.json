@@ -1,0 +1,80 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "products": "Produits",
+    "services": "Services",
+    "blog": "Blog",
+    "about": "À Propos",
+    "contact": "Contactez-nous"
+  },
+  "buttons": {
+    "readMore": "Lire la Suite",
+    "viewAll": "Voir Tout",
+    "contactUs": "Contactez-nous",
+    "seeDetails": "Voir les Détails",
+    "bookAppointment": "Prendre Rendez-vous",
+    "becomeDistributor": "Devenir Distributeur",
+    "sendMessage": "Envoyer le Message",
+    "explore": "Découvrir nos Produits"
+  },
+  "home": {
+    "hero": {
+      "title": "Huiles Moteur Premium",
+      "subtitle": "Pour des Performances Optimales",
+      "description": "Découvrez notre gamme d'huiles moteur de haute qualité conçues pour des performances optimales dans les conditions camerounaises."
+    },
+    "featured": {
+      "title": "Produits Vedettes",
+      "subtitle": "Découvrez nos huiles moteur les plus vendues"
+    }
+  },
+  "about": {
+    "title": "À Propos d'Engine SARL",
+    "description": "Leader dans la fourniture d'huiles moteur de haute qualité, dédié à la performance, la durabilité et la fiabilité de tous les moteurs mécaniques au Cameroun.",
+    "mission": {
+      "title": "Notre Mission",
+      "text": "Fournir l'huile moteur de la plus haute qualité qui assure performance, durabilité et fiabilité pour tous les moteurs mécaniques."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "text": "Devenir le fournisseur d'huile moteur le plus fiable et le plus reconnu au Cameroun."
+    }
+  },
+  "products": {
+    "title": "Nos Produits",
+    "categories": {
+      "all": "Tous les Produits",
+      "engine": "Huiles Moteur",
+      "transmission": "Fluides de Transmission",
+      "gear": "Huiles de Boîte",
+      "specialty": "Produits Spécialisés"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Des produits d'huile moteur premium complétés par des services exceptionnels adaptés à vos besoins.",
+    "oilService": {
+      "title": "Service de Remplacement d'Huile Gratuit",
+      "description": "Service de vidange professionnel par des techniciens experts."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Contactez-nous pour vos demandes, support ou opportunités de partenariat.",
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le Message"
+    }
+  },
+  "blog": {
+    "title": "Actualités et Perspectives",
+    "readMore": "Lire la Suite",
+    "categories": "Catégories",
+    "tags": "Étiquettes",
+    "recentPosts": "Articles Récents"
+  }
+}

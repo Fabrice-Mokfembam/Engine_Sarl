@@ -1,0 +1,80 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "buttons": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "seeDetails": "See Details",
+    "bookAppointment": "Book an Appointment",
+    "becomeDistributor": "Become a Distributor",
+    "sendMessage": "Send Message",
+    "explore": "Explore Our Products"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Engine Oils",
+      "subtitle": "For Peak Performance",
+      "description": "Discover our range of high-quality engine oils designed for optimal performance in Cameroonian conditions."
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Explore our best-selling engine oils"
+    }
+  },
+  "about": {
+    "title": "About Engine SARL",
+    "description": "Leading provider of high-quality engine oils, dedicated to peak performance, durability, and reliability for all mechanical engines in Cameroon.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To deliver the highest quality engine oil that ensures peak performance, durability, and reliability for all mechanical engines."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To become the leading and most trusted engine oil supplier in Cameroon."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "categories": {
+      "all": "All Products",
+      "engine": "Engine Oils",
+      "transmission": "Transmission Fluids",
+      "gear": "Gear Oils",
+      "specialty": "Specialty Products"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Premium engine oil products complemented by exceptional services tailored to your needs.",
+    "oilService": {
+      "title": "Free Oil Replacement Service",
+      "description": "Professional oil change service by expert technicians."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for inquiries, support, or partnership opportunities.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "blog": {
+    "title": "Latest News & Insights",
+    "readMore": "Read More",
+    "categories": "Categories",
+    "tags": "Tags",
+    "recentPosts": "Recent Posts"
+  }
+}

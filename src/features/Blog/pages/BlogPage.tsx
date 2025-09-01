@@ -9,7 +9,6 @@ const BlogPage: React.FC = () => {
   
   // Extract unique categories and tags for sidebar
   const categories = Array.from(new Set(blogPosts.map(post => post.category)));
-  const tags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
 
   // Filter posts based on search, category, and tag
   const filteredPosts = blogPosts.filter(post => {
@@ -97,27 +96,7 @@ const BlogPage: React.FC = () => {
               </ul>
             </div>
             
-            {/* Tags */}
-            <div className="bg-white rounded-3xl shadow-lg p-8 border-l-4 border-secondary">
-              <h2 className="text-2xl font-bold text-secondary mb-6 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-secondary/30">Tags</h2>
-              <div className="flex flex-wrap gap-2">
-                <button 
-                  onClick={() => setSelectedTag(null)}
-                  className={`text-sm px-3 py-1 transition duration-300 ${selectedTag === null ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'}`}
-                >
-                  All Tags
-                </button>
-                {tags.map(tag => (
-                  <button 
-                    key={tag} 
-                    onClick={() => setSelectedTag(tag)}
-                    className={`text-sm px-3 py-1 transition duration-300 ${selectedTag === tag ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'}`}
-                  >
-                    #{tag}
-                  </button>
-                ))}
-              </div>
-            </div>
+
             
             {/* Recent Posts */}
             <div className="bg-white rounded-3xl shadow-lg p-8 border-l-4 border-secondary">

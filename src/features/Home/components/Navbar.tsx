@@ -1,12 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { logo } from '../../../assets/images';
 
 const Navbar: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
-  const [language, setLanguage] = useState('en'); // 'en' for English, 'fr' for French
+  const currentLanguage = i18n.language;
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -25,17 +27,17 @@ const Navbar: React.FC = () => {
   }, [location]);
 
   const handleLanguageChange = (lang: string) => {
-    setLanguage(lang);
+    i18n.changeLanguage(lang);
     setShowLanguagePopup(false);
   };
 
   // Navigation items
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/products', label: 'Products' },
-    { path: '/services', label: 'Services' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/about', label: 'About Us' },
+    { path: '/', label: t('navigation.home') },
+    { path: '/products', label: t('navigation.products') },
+    { path: '/services', label: t('navigation.services') },
+    { path: '/blog', label: t('navigation.blog') },
+    { path: '/about', label: t('navigation.about') },
   ];
 
   return (
@@ -79,7 +81,7 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={() => handleLanguageChange('en')}
                   className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
-                    language === 'en' 
+                    currentLanguage === 'en' 
                       ? 'bg-primary/10 text-primary font-medium' 
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
@@ -89,7 +91,7 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={() => handleLanguageChange('fr')}
                   className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
-                    language === 'fr' 
+                    currentLanguage === 'fr' 
                       ? 'bg-primary/10 text-primary font-medium' 
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
@@ -104,7 +106,7 @@ const Navbar: React.FC = () => {
             to="/contact" 
             className="bg-primary text-white px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium shadow-md hover:shadow-lg"
           >
-            Contact Us
+            {t('navigation.contact')}
           </Link>
         </div>
 
@@ -123,7 +125,7 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={() => handleLanguageChange('en')}
                   className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
-                    language === 'en' 
+                    currentLanguage === 'en' 
                       ? 'bg-primary/10 text-primary font-medium' 
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
@@ -133,7 +135,7 @@ const Navbar: React.FC = () => {
                 <button
                   onClick={() => handleLanguageChange('fr')}
                   className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
-                    language === 'fr' 
+                    currentLanguage === 'fr' 
                       ? 'bg-primary/10 text-primary font-medium' 
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
@@ -176,7 +178,7 @@ const Navbar: React.FC = () => {
             className="block bg-primary text-white px-4 py-3 rounded-lg text-center font-medium mt-2 hover:bg-primary/90 transition-colors duration-300"
             onClick={() => setIsOpen(false)}
           >
-            Contact Us
+            {t('navigation.contact')}
           </Link>
         </div>
       </div>
