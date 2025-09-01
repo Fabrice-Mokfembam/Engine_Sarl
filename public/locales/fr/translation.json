@@ -24,13 +24,45 @@
       "description": "Découvrez notre gamme d'huiles moteur de haute qualité conçues pour des performances optimales dans les conditions camerounaises."
     },
     "featured": {
-      "title": "Produits Vedettes",
-      "subtitle": "Découvrez nos huiles moteur les plus vendues"
+      "title": "Nos Modèles d'Huile Moteur Premium",
+      "subtitle": "Conçus pour des performances optimales et une protection ultime dans les conditions africaines",
+      "products": {
+        "atf45": {
+          "title": "ATF 45",
+          "description": "Fluide de transmission avancé pour des changements de vitesse en douceur et une durée de vie prolongée de la transmission."
+        },
+        "15w40": {
+          "title": "15W 40",
+          "description": "Huile moteur pour charges lourdes offrant une protection robuste dans des conditions exigeantes et à haute température."
+        },
+        "10w30": {
+          "title": "10W 30",
+          "description": "Huile moteur polyvalente offrant d'excellentes performances pour une large gamme de véhicules."
+        }
+      },
+      "learnMore": "En Savoir Plus →",
+      "exploreAll": "Découvrir Tous les Produits"
+    },
+    "productSelector": {
+      "title": "Trouvez l'Huile Parfaite pour Votre Véhicule",
+      "description": "Notre sélecteur rapide vous aide à choisir la bonne huile moteur pour vos besoins spécifiques",
+      "vehicleType": "Type de Véhicule",
+      "brand": "Marque",
+      "model": "Modèle",
+      "findOil": "Trouver Mon Huile",
+      "options": {
+        "vehicleTypes": {
+          "car": "Voiture",
+          "truck": "Camion",
+          "motorcycle": "Moto",
+          "generator": "Générateur"
+        }
+      }
     }
   },
   "about": {
     "title": "À Propos d'Engine SARL",
-    "description": "Leader dans la fourniture d'huiles moteur de haute qualité, dédié à la performance, la durabilité et la fiabilité de tous les moteurs mécaniques au Cameroun.",
+    "description": "Fondée au Cameroun, Engine SARL s'engage à révolutionner l'entretien des moteurs à travers le pays. Notre mission est de fournir des huiles moteur de la plus haute qualité, garantissant des performances optimales, une durabilité et une fiabilité pour tous les moteurs mécaniques. Nous aspirons à devenir le fournisseur d'huile moteur le plus fiable et de référence au Cameroun, établissant ainsi la norme d'excellence en Afrique.",
     "mission": {
       "title": "Notre Mission",
       "text": "Fournir l'huile moteur de la plus haute qualité qui assure performance, durabilité et fiabilité pour tous les moteurs mécaniques."
@@ -52,11 +84,26 @@
   },
   "services": {
     "title": "Nos Services",
-    "description": "Des produits d'huile moteur premium complétés par des services exceptionnels adaptés à vos besoins.",
+    "description": "Au-delà des produits premium - des solutions complètes pour l'entretien de votre moteur",
     "oilService": {
-      "title": "Service de Remplacement d'Huile Gratuit",
-      "description": "Service de vidange professionnel par des techniciens experts."
-    }
+      "title": "Service de Vidange Gratuit",
+      "description": "Chez Engine SARL, nous croyons en l'importance d'un entretien complet de votre véhicule. C'est pourquoi nous offrons un service de vidange gratuit lors de l'achat de nos huiles moteur premium. Nos techniciens qualifiés assurent une vidange rapide et efficace, en utilisant les bons outils et techniques pour maintenir votre moteur en bon état de fonctionnement.",
+      "howItWorks": {
+        "title": "Comment ça marche :",
+        "steps": [
+          "Achetez votre produit Engine SARL préféré",
+          "Planifiez votre vidange gratuite dans l'un de nos centres de service",
+          "Nos techniciens certifiés effectuent la vidange avec soin",
+          "Repartez en toute confiance avec des performances moteur optimales"
+        ]
+      }
+    },
+    "distribution": {
+      "title": "Réseau de Distribution",
+      "description": "Nous étendons activement notre réseau de distribution au Cameroun. Rejoignez-nous en tant que partenaire pour apporter des huiles moteur premium dans votre région.",
+      "becomeDistributor": "Devenir Distributeur"
+    },
+    "learnMore": "En Savoir Plus sur Nos Services"
   },
   "contact": {
     "title": "Contactez-nous",
@@ -76,5 +123,54 @@
     "categories": "Catégories",
     "tags": "Étiquettes",
     "recentPosts": "Articles Récents"
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi Choisir Engine SARL ?",
+    "subtitle": "L'excellence dans chaque goutte - ce qui nous distingue",
+    "features": {
+      "quality": {
+        "title": "Assurance Qualité",
+        "description": "Chaque lot de notre huile moteur subit des tests rigoureux pour répondre aux normes internationales et performer de manière optimale dans les conditions africaines."
+      },
+      "reach": {
+        "title": "Couverture Nationale",
+        "description": "Avec des centres de distribution dans plus de 10 régions au Cameroun, nous ne sommes jamais loin de vous."
+      },
+      "innovation": {
+        "title": "Formules Innovantes",
+        "description": "Nos huiles sont spécialement formulées pour répondre aux défis uniques du climat africain et des conditions routières."
+      },
+      "commitment": {
+        "title": "Engagement Client",
+        "description": "Votre satisfaction est notre priorité. Nous offrons un support et des services complets pour assurer votre tranquillité d'esprit."
+      },
+      "service": {
+        "title": "Service Rapide",
+        "description": "Notre service de vidange gratuit vous permet de reprendre la route rapidement avec un minimum d'interruption."
+      },
+      "environment": {
+        "title": "Responsabilité Environnementale",
+        "description": "Nous nous engageons dans des pratiques durables et la réduction de l'impact environnemental dans toutes nos opérations."
+      }
+    }
+  },
+  "partnership": {
+    "title": "Opportunités de Partenariat",
+    "subtitle": "Rejoignez notre réseau croissant de distributeurs au Cameroun",
+    "benefits": {
+      "territories": {
+        "title": "Territoires Exclusifs",
+        "description": "Obtenez des droits de distribution exclusifs dans votre région avec des territoires protégés."
+      },
+      "margins": {
+        "title": "Marges Compétitives",
+        "description": "Bénéficiez de marges bénéficiaires leaders du secteur avec notre structure tarifaire compétitive."
+      },
+      "marketing": {
+        "title": "Support Marketing",
+        "description": "Recevez du matériel marketing complet et un support pour développer votre activité."
+      }
+    },
+    "learnMore": "En Savoir Plus sur les Opportunités de Partenariat"
   }
 }

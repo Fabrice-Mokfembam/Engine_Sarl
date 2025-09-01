@@ -24,13 +24,45 @@
       "description": "Discover our range of high-quality engine oils designed for optimal performance in Cameroonian conditions."
     },
     "featured": {
-      "title": "Featured Products",
-      "subtitle": "Explore our best-selling engine oils"
+      "title": "Our Premium Engine Oil Models",
+      "subtitle": "Engineered for peak performance and ultimate protection in African conditions",
+      "products": {
+        "atf45": {
+          "title": "ATF 45",
+          "description": "Advanced transmission fluid for smooth gear shifts and extended transmission life."
+        },
+        "15w40": {
+          "title": "15W 40",
+          "description": "Heavy-duty engine oil for robust protection in demanding conditions and high temperatures."
+        },
+        "10w30": {
+          "title": "10W 30",
+          "description": "Versatile engine oil offering excellent performance for a wide range of vehicles."
+        }
+      },
+      "learnMore": "Learn More →",
+      "exploreAll": "Explore All Products"
+    },
+    "productSelector": {
+      "title": "Find the Perfect Oil for Your Vehicle",
+      "description": "Our quick selector helps you choose the right engine oil for your specific needs",
+      "vehicleType": "Vehicle Type",
+      "brand": "Brand",
+      "model": "Model",
+      "findOil": "Find My Oil",
+      "options": {
+        "vehicleTypes": {
+          "car": "Car",
+          "truck": "Truck",
+          "motorcycle": "Motorcycle",
+          "generator": "Generator"
+        }
+      }
     }
   },
   "about": {
     "title": "About Engine SARL",
-    "description": "Leading provider of high-quality engine oils, dedicated to peak performance, durability, and reliability for all mechanical engines in Cameroon.",
+    "description": "Founded in Cameroon, Engine SARL is dedicated to revolutionizing engine care across the nation. Our mission is to deliver the highest quality engine oils that ensure peak performance, durability, and reliability for all mechanical engines. We envision becoming the leading and most trusted engine oil supplier in Cameroon, setting the standard for excellence in Africa.",
     "mission": {
       "title": "Our Mission",
       "text": "To deliver the highest quality engine oil that ensures peak performance, durability, and reliability for all mechanical engines."
@@ -52,11 +84,26 @@
   },
   "services": {
     "title": "Our Services",
-    "description": "Premium engine oil products complemented by exceptional services tailored to your needs.",
+    "description": "Beyond premium products - comprehensive solutions for your engine care needs",
     "oilService": {
       "title": "Free Oil Replacement Service",
-      "description": "Professional oil change service by expert technicians."
-    }
+      "description": "At Engine SARL, we believe in providing complete care for your vehicle. That's why we offer a complimentary oil replacement service when you purchase our premium engine oils. Our skilled technicians ensure a quick and efficient oil change, using the right tools and techniques to keep your engine running smoothly.",
+      "howItWorks": {
+        "title": "How It Works:",
+        "steps": [
+          "Purchase your preferred Engine SARL oil product",
+          "Schedule your free replacement at one of our service centers",
+          "Our certified technicians perform the oil change with care",
+          "Drive away with confidence and optimal engine performance"
+        ]
+      }
+    },
+    "distribution": {
+      "title": "Distribution Network",
+      "description": "We're actively expanding our distribution network across Cameroon. Join us as a partner to bring premium engine oils to your region.",
+      "becomeDistributor": "Become a Distributor"
+    },
+    "learnMore": "Learn More About Our Services"
   },
   "contact": {
     "title": "Contact Us",
@@ -76,5 +123,54 @@
     "categories": "Categories",
     "tags": "Tags",
     "recentPosts": "Recent Posts"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Engine SARL?",
+    "subtitle": "Excellence in every drop - here's what sets us apart",
+    "features": {
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Every batch of our engine oil undergoes rigorous testing to meet international standards and perform optimally in African conditions."
+      },
+      "reach": {
+        "title": "Nationwide Reach",
+        "description": "With distribution centers across 10+ regions in Cameroon, we're never far from your location."
+      },
+      "innovation": {
+        "title": "Innovative Formulas",
+        "description": "Our oils are specially formulated for the unique challenges of African climate and road conditions."
+      },
+      "commitment": {
+        "title": "Customer Commitment",
+        "description": "Your satisfaction is our priority. We offer comprehensive support and services to ensure your complete peace of mind."
+      },
+      "service": {
+        "title": "Quick Service",
+        "description": "Our free oil replacement service gets you back on the road quickly with minimal downtime."
+      },
+      "environment": {
+        "title": "Environmental Responsibility",
+        "description": "We're committed to sustainable practices and reducing environmental impact throughout our operations."
+      }
+    }
+  },
+  "partnership": {
+    "title": "Partnership Opportunities",
+    "subtitle": "Join our growing network of distributors across Cameroon",
+    "benefits": {
+      "territories": {
+        "title": "Exclusive Territories",
+        "description": "Gain exclusive distribution rights in your region with protected territories."
+      },
+      "margins": {
+        "title": "Competitive Margins",
+        "description": "Enjoy industry-leading profit margins with our competitive pricing structure."
+      },
+      "marketing": {
+        "title": "Marketing Support",
+        "description": "Receive comprehensive marketing materials and support to grow your business."
+      }
+    },
+    "learnMore": "Learn About Partnership Opportunities"
   }
 }

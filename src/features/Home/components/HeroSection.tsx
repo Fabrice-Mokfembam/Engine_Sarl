@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { video1, video3 } from '../../../assets/videos';
 
 
 
 
-
 const HeroSection: React.FC = () => {
+  const { t } = useTranslation();
   const [currentVideo, setCurrentVideo] = useState(1);
 
   useEffect(() => {
@@ -49,19 +50,19 @@ const HeroSection: React.FC = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
              <div className="z-10 text-center px-6 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-            Power Your Journey with <span className="text-secondary">Engine SARL</span>
+            {t('home.hero.title')} <span className="text-secondary">Engine SARL</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/95 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-            Premium Engine Oils for Peak Performance in Cameroonian Conditions
+            {t('home.hero.description')}
           </p>
          
         </div>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/products" className="bg-primary hover:bg-primary/90 text-white font-bold py-5 px-10  shadow-lg transition-all duration-300 transform hover:scale-105">
-              Explore Products
+              {t('buttons.explore')}
             </Link>
             <Link to="/contact" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-5 px-10 shadow-lg transition-all duration-300 transform hover:scale-105">
-              Contact Us Now
+              {t('buttons.contactUs')}
             </Link>
           </div>
         </div>
