@@ -114,9 +114,9 @@ const ProductDetailPage: React.FC = () => {
               
               {/* Image thumbnails */}
               <div className="grid grid-cols-4 gap-4 mt-6">
-                {productImages.map((img, index) => (
-                  <div 
-                    key={index} 
+                {productImages.map((_, index) => (
+                  <div
+                    key={index}
                     className={`h-20 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${currentImage === index ? 'ring-2 ring-secondary' : 'opacity-70'}`}
                     onClick={() => setCurrentImage(index)}
                   >
