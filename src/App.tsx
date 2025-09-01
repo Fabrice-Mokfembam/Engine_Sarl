@@ -6,6 +6,7 @@ import ServicesPage from './features/Services/pages/ServicesPage';
 import BlogPage from './features/Blog/pages/BlogPage';
 import ContactUsPage from './features/ContactUs/pages/ContactUsPage';
 import AboutUsPage from './features/AboutUs/pages/AboutUsPage';
+import ProductDetailPage from './features/Products/pages/ProductDetailPage';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'products',
         element: <ProductsPage />,
+      },
+      {
+        path: `products/:id`,
+        element: <ProductDetailPage />,
       },
       {
         path: 'services',

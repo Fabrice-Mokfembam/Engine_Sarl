@@ -1,103 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {  products } from '../../../data/productData';
 
 const ProductsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-
-  // Product data
-  const products = [
-    {
-      id: 1,
-      name: "ATF 45",
-      category: "transmission",
-      description: "Advanced transmission fluid for smooth gear shifts and extended transmission life.",
-      features: ["Smooth shifting", "Extended transmission life", "Thermal stability"],
-      specifications: {
-        viscosity: "45",
-        type: "Automatic Transmission Fluid",
-        applications: "Cars, Trucks, SUVs"
-      },
-      image: "/path/to/atf45.jpg",
-      price: 18500,
-      rating: 4.8
-    },
-    {
-      id: 2,
-      name: "15W 40",
-      category: "engine",
-      description: "Heavy-duty engine oil for robust protection in demanding conditions and high temperatures.",
-      features: ["High temperature stability", "Engine cleanliness", "Wear protection"],
-      specifications: {
-        viscosity: "15W-40",
-        type: "Mineral Engine Oil",
-        applications: "Diesel Engines, Heavy Duty Vehicles"
-      },
-      image: "/path/to/15w40.jpg",
-      price: 15200,
-      rating: 4.6
-    },
-    {
-      id: 3,
-      name: "10W 30",
-      category: "engine",
-      description: "Versatile engine oil offering excellent performance for a wide range of vehicles.",
-      features: ["All-season performance", "Fuel efficiency", "Engine protection"],
-      specifications: {
-        viscosity: "10W-30",
-        type: "Synthetic Blend",
-        applications: "Cars, Light Trucks, Vans"
-      },
-      image: "/path/to/10w30.jpg",
-      price: 16700,
-      rating: 4.7
-    },
-    {
-      id: 4,
-      name: "0W 20",
-      category: "engine",
-      description: "Fuel-efficient synthetic oil for modern engines requiring low viscosity.",
-      features: ["Improved fuel economy", "Cold start performance", "Engine cleanliness"],
-      specifications: {
-        viscosity: "0W-20",
-        type: "Full Synthetic",
-        applications: "Modern Gasoline Engines"
-      },
-      image: "/path/to/0w20.jpg",
-      price: 21900,
-      rating: 4.9
-    },
-    {
-      id: 5,
-      name: "80W 90",
-      category: "gear",
-      description: "High-performance gear oil for manual transmissions and differentials.",
-      features: ["Extreme pressure protection", "Thermal stability", "Corrosion inhibition"],
-      specifications: {
-        viscosity: "80W-90",
-        type: "Gear Oil",
-        applications: "Manual Transmissions, Differentials"
-      },
-      image: "/path/to/80w90.jpg",
-      price: 14200,
-      rating: 4.5
-    },
-    {
-      id: 6,
-      name: "Universal Tractor Fluid",
-      category: "specialty",
-      description: "Multi-purpose fluid for agricultural and construction equipment.",
-      features: ["Multi-functional", "Hydraulic system protection", "Wet brake compatibility"],
-      specifications: {
-        viscosity: "Universal",
-        type: "Tractor Fluid",
-        applications: "Tractors, Heavy Equipment"
-      },
-      image: "/path/to/tractor-fluid.jpg",
-      price: 19800,
-      rating: 4.4
-    }
-  ];
+ 
 
   // Filter products based on category
   const filteredProducts = selectedCategory === 'all' 
@@ -186,18 +94,12 @@ const ProductsPage: React.FC = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedProducts.map(product => (
-            <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+            <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="relative h-56 bg-gray-200 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                   <div className="w-32 h-32 bg-white/80 rounded-full flex items-center justify-center">
                     <span className="text-xl font-bold text-primary">{product.name}</span>
                   </div>
-                </div>
-                <div className="absolute top-4 right-4 bg-white rounded-full px-3 py-1 shadow-md flex items-center">
-                  <svg className="w-5 h-5 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="font-semibold text-gray-800">{product.rating}</span>
                 </div>
               </div>
               
@@ -205,43 +107,14 @@ const ProductsPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-primary mb-2">{product.name}</h3>
                 <p className="text-gray-700 mb-4">{product.description}</p>
                 
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Key Features:</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {product.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 mb-2">Specifications:</h4>
-                  <div className="grid grid-cols-2 gap-2 text-sm">
-                    <div className="text-gray-600">Viscosity:</div>
-                    <div className="font-medium">{product.specifications.viscosity}</div>
-                    
-                    <div className="text-gray-600">Type:</div>
-                    <div className="font-medium">{product.specifications.type}</div>
-                    
-                    <div className="text-gray-600">Applications:</div>
-                    <div className="font-medium">{product.specifications.applications}</div>
-                  </div>
-                </div>
-                
                 <div className="flex justify-between items-center mt-6">
-                  <div>
-                    <span className="text-2xl font-bold text-secondary">{product.price.toLocaleString()} FCFA</span>
-                    <span className="text-sm text-gray-500 block">per container</span>
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300">
-                      Details
-                    </button>
-                    <button className="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300">
-                      Buy Now
-                    </button>
-                  </div>
+                  <span className="text-2xl font-bold text-secondary">{product.price.toLocaleString()} FCFA</span>
+                  <Link 
+                    to={`/products/${product.id}`} 
+                    className="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 shadow-lg transition-all duration-300"
+                  >
+                    See Details
+                  </Link>
                 </div>
               </div>
             </div>
