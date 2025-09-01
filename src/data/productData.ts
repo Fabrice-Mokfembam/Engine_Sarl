@@ -81,37 +81,5 @@ export const products: Product[] = [
     image: modelcontainer1,
     price: 21900,
     rating: 4.9
-  },
-  {
-    id: 5,
-    name: "5W 30",
-    category: "engine",
-    description: "Premium synthetic blend oil for optimal performance in modern engines.",
-    longDescription: "A premium synthetic blend oil that provides excellent engine protection in both high and low temperatures. Reduces engine wear and improves fuel economy.",
-    features: ["Temperature resistance", "Wear reduction", "Fuel economy"],
-    specifications: {
-      viscosity: "5W-30",
-      type: "Synthetic Blend",
-      applications: "Modern Passenger Vehicles"
-    },
-    image: modelcontainer1,
-    price: 17500,
-    rating: 4.7
-  },
-  {
-    id: 6,
-    name: "20W 50",
-    category: "engine",
-    description: "High-performance oil designed for higher mileage engines.",
-    longDescription: "Specifically formulated for vehicles with higher mileage. 20W 50 helps reduce oil consumption and minimizes leaks in older engines while providing superior protection.",
-    features: ["Leak prevention", "High mileage protection", "Engine longevity"],
-    specifications: {
-      viscosity: "20W-50",
-      type: "High Mileage Oil",
-      applications: "Older Engines, High Mileage Vehicles"
-    },
-    image: modelcontainer1,
-    price: 14800,
-    rating: 4.5
   }
 ];

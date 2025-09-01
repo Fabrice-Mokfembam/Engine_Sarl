@@ -1,11 +1,27 @@
-import { bannerImage2, bannerImage3, logo } from "../../../assets/images";
+import {company, work} from "../../../assets/images";
+import { about } from "../../../assets/videos";
+
 
 const AboutUsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-primary via-primary/90 to-secondary rounded-b-[4rem] shadow-2xl overflow-hidden min-h-[70vh] mb-20">
-        <div className="absolute inset-0 bg-black/20 z-0"></div>
+      <section className="relative flex flex-col md:flex-row items-center justify-between  shadow-2xl overflow-hidden min-h-[80vh] mb-20">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={about} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+       
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
         <div className="z-10 flex-1 px-8 py-16 md:py-24 flex flex-col justify-center text-center md:text-left">
           <div className="max-w-2xl mx-auto md:mx-0">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
@@ -14,22 +30,12 @@ const AboutUsPage = () => {
             <p className="text-xl md:text-2xl text-white/95 mb-10 max-w-xl font-medium leading-relaxed">
               Leading provider of high-quality engine oils, dedicated to peak performance, durability, and reliability for all mechanical engines in Cameroon.
             </p>
-            <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
+            <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 shadow-lg transition-all duration-300 transform hover:scale-105 text-lg">
               Discover Our Story
             </button>
           </div>
         </div>
-        <div className="flex-1 flex items-center justify-center relative h-[400px] md:h-[500px]">
-          <div className="absolute w-80 h-80 md:w-96 md:h-96 bg-white/10 rounded-full flex items-center justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-white/20 rounded-full flex items-center justify-center">
-              <img
-                src={logo}
-                alt="Engine SARL Logo"
-                className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-secondary bg-white shadow-2xl p-2 animate-pulse-slow"
-              />
-            </div>
-          </div>
-        </div>
+    
         {/* Decorative elements */}
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-secondary/40 rounded-full blur-3xl z-0 animate-float" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/30 rounded-full blur-3xl z-0 animate-float-reverse" />
@@ -68,7 +74,7 @@ const AboutUsPage = () => {
             <div className="absolute -top-8 -right-8 w-20 h-20 bg-secondary/5 rounded-full z-0"></div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
               <img
-                src={bannerImage2}
+                src={company}
                 alt="Engine SARL Team"
                 className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -76,7 +82,7 @@ const AboutUsPage = () => {
             </div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
               <img
-                src={bannerImage3}
+                src={work}
                 alt="Engine SARL Office"
                 className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
@@ -177,7 +183,7 @@ const AboutUsPage = () => {
               <p className="text-xl mb-10 opacity-95">Discover what sets us apart in the engine oil industry</p>
               <a
                 href="/products"
-                className="inline-block bg-white text-primary font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-lg"
+                className="inline-block bg-white text-primary font-bold py-4 px-10 shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300 text-lg"
               >
                 Explore Our Products
               </a>
@@ -243,13 +249,13 @@ const AboutUsPage = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a
             href="/contact"
-            className="inline-block bg-secondary text-white font-bold py-4 px-12 rounded-full shadow-lg hover:bg-secondary/90 hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block bg-primary text-white font-bold py-4 px-12 shadow-lg hover:bg-primary/90 hover:scale-105 transition-all duration-300 text-lg"
           >
             Contact Us
           </a>
           <a
             href="/products"
-            className="inline-block border-2 border-secondary text-secondary font-bold py-4 px-12 rounded-full shadow-lg hover:bg-secondary hover:text-white hover:scale-105 transition-all duration-300 text-lg"
+            className="inline-block border-2 border-primary text-primary font-bold py-4 px-12 shadow-lg hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 text-lg"
           >
             View Products
           </a>

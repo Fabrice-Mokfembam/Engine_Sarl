@@ -21,7 +21,7 @@ const ProductsPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center bg-gradient-to-br from-primary via-primary/90 to-secondary rounded-b-[4rem] shadow-2xl overflow-hidden min-h-[40vh] py-16">
         <div className="absolute inset-0 bg-black/20 z-0"></div>
@@ -45,31 +45,31 @@ const ProductsPage: React.FC = () => {
           <div className="flex flex-wrap gap-2">
             <button 
               onClick={() => setSelectedCategory('all')}
-              className={`px-4 py-2 rounded-full ${selectedCategory === 'all' ? 'bg-secondary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
+              className={`px-4 py-2 ${selectedCategory === 'all' ? 'bg-primary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
             >
               All Products
             </button>
             <button 
               onClick={() => setSelectedCategory('engine')}
-              className={`px-4 py-2 rounded-full ${selectedCategory === 'engine' ? 'bg-secondary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
+              className={`px-4 py-2 ${selectedCategory === 'engine' ? 'bg-primary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
             >
               Engine Oils
             </button>
             <button 
               onClick={() => setSelectedCategory('transmission')}
-              className={`px-4 py-2 rounded-full ${selectedCategory === 'transmission' ? 'bg-secondary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
+              className={`px-4 py-2 ${selectedCategory === 'transmission' ? 'bg-primary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
             >
               Transmission Fluids
             </button>
             <button 
               onClick={() => setSelectedCategory('gear')}
-              className={`px-4 py-2 rounded-full ${selectedCategory === 'gear' ? 'bg-secondary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
+              className={`px-4 py-2 ${selectedCategory === 'gear' ? 'bg-primary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
             >
               Gear Oils
             </button>
             <button 
               onClick={() => setSelectedCategory('specialty')}
-              className={`px-4 py-2 rounded-full ${selectedCategory === 'specialty' ? 'bg-secondary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
+              className={`px-4 py-2 ${selectedCategory === 'specialty' ? 'bg-primary text-white' : 'bg-white text-gray-700'} shadow-lg transition-all duration-300`}
             >
               Specialty Products
             </button>
@@ -147,7 +147,7 @@ const ProductsPage: React.FC = () => {
                       <td className="p-4 text-center">{product.specifications.applications}</td>
                       <td className="p-4 text-center font-bold text-secondary">{product.price.toLocaleString()} FCFA</td>
                       <td className="p-4 text-center">
-                        <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition-all duration-300 text-sm">
+                        <button className="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 shadow-lg transition-all duration-300 text-sm">
                           Select
                         </button>
                       </td>

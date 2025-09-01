@@ -25,7 +25,7 @@ const BlogPage: React.FC = () => {
   const recentPosts = blogPosts.slice(0, 2);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section */}
       <section className="relative flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-primary via-primary/90 to-secondary rounded-b-[4rem] shadow-2xl overflow-hidden min-h-[60vh] mb-20">
         <div className="absolute inset-0 bg-black/20 z-0"></div>
@@ -103,7 +103,7 @@ const BlogPage: React.FC = () => {
               <div className="flex flex-wrap gap-2">
                 <button 
                   onClick={() => setSelectedTag(null)}
-                  className={`text-sm px-3 py-1 rounded-full transition duration-300 ${selectedTag === null ? 'bg-secondary text-white' : 'bg-gray-200 text-gray-700 hover:bg-secondary hover:text-white'}`}
+                  className={`text-sm px-3 py-1 transition duration-300 ${selectedTag === null ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'}`}
                 >
                   All Tags
                 </button>
@@ -111,7 +111,7 @@ const BlogPage: React.FC = () => {
                   <button 
                     key={tag} 
                     onClick={() => setSelectedTag(tag)}
-                    className={`text-sm px-3 py-1 rounded-full transition duration-300 ${selectedTag === tag ? 'bg-secondary text-white' : 'bg-gray-200 text-gray-700 hover:bg-secondary hover:text-white'}`}
+                    className={`text-sm px-3 py-1 transition duration-300 ${selectedTag === tag ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'}`}
                   >
                     #{tag}
                   </button>
@@ -161,7 +161,7 @@ const BlogPage: React.FC = () => {
                     setSelectedTag(null);
                     setSearchQuery('');
                   }}
-                  className="bg-secondary hover:bg-secondary/90 text-white font-medium py-2 px-4 rounded-full transition-all duration-300"
+                  className="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 transition-all duration-300"
                 >
                   Clear Filters
                 </button>

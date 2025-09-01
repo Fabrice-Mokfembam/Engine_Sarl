@@ -1,6 +1,5 @@
-
-import { Link } from 'react-router-dom';
-import { Menu, X, Globe, Moon, Sun } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { logo } from '../../../assets/images';
 
@@ -8,105 +7,179 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showLanguagePopup, setShowLanguagePopup] = useState(false);
   const [language, setLanguage] = useState('en'); // 'en' for English, 'fr' for French
-  const [theme, setTheme] = useState('light'); // 'light' or 'dark'
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
+  // Handle scroll effect for navbar
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    console.log('Current theme:', language);
-  }, [theme]);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
     setShowLanguagePopup(false);
   };
 
-  const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  // Navigation items
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/products', label: 'Products' },
+    { path: '/services', label: 'Services' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/about', label: 'About Us' },
+  ];
 
   return (
-    <nav className=" bg-[#F5F7FA] p-4 w-full h-[86px] border-b border-gray-50 flex justify-center">
-      <div className="h-full w-[88vw] mx-auto flex justify-between items-center relative">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-[#F5F7FA] py-4'} border-b border-gray-100`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo Section */}
-        <div className="text-text text-2xl font-bold mt-16">
-          <div className='size-40 bottom-0'>
-            <img src={logo} alt="" />
-          </div>
-          
-        </div>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Engine SARL" className="h-12 md:h-16 transition-all duration-300" />
+        </Link>
 
         {/* Navigation Links - Desktop */}
-        <div className="hidden md:flex flex-1 justify-center items-center space-x-9 text-[17px]">
-
-          <Link to="/" className="text-text hover:text-gray-300">Home</Link>
-          <Link to="/products" className="text-text hover:text-gray-300">Products</Link>
-          <Link to="/services" className="text-text hover:text-gray-300">Services</Link>
-          <Link to="/blog" className="text-text hover:text-gray-300">Blog</Link>
-          <Link to="/about" className="text-text hover:text-gray-300">About Us</Link>
-        
+        <div className="hidden md:flex items-center space-x-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`px-4 py-2 rounded-lg text-[16px] font-medium transition-all duration-300 hover:bg-primary/10 hover:text-primary ${
+                location.pathname === item.path 
+                  ? 'text-primary bg-primary/10' 
+                  : 'text-gray-700 hover:text-primary'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         {/* Right Section - Icons */}
         <div className="hidden md:flex items-center space-x-4">
           {/* Language Change Icon */}
           <div className="relative">
-            <button onClick={() => setShowLanguagePopup(!showLanguagePopup)}>
-              <Globe className="lucide lucide-globe" />
+            <button 
+              onClick={() => setShowLanguagePopup(!showLanguagePopup)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              aria-label="Change language"
+            >
+              <Globe size={20} className="text-gray-700" />
             </button>
             {showLanguagePopup && (
-              <div className="absolute right-0 mt-2 w-28 bg-white rounded-md shadow-lg z-50">
+              <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg z-50 border border-gray-200 overflow-hidden animate-fadeIn">
                 <button
-                  onClick={() => { handleLanguageChange('en'); }}
-                  className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  onClick={() => handleLanguageChange('en')}
+                  className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
+                    language === 'en' 
+                      ? 'bg-primary/10 text-primary font-medium' 
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
                 >
                   English
                 </button>
                 <button
-                  onClick={() => { handleLanguageChange('fr'); }}
-                  className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  onClick={() => handleLanguageChange('fr')}
+                  className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
+                    language === 'fr' 
+                      ? 'bg-primary/10 text-primary font-medium' 
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
                 >
-                  French
+                  Français
                 </button>
               </div>
             )}
           </div>
-          {/* Theme Toggle Icon */}
-          <button
-            onClick={toggleTheme}
-            className=""
+          
+          <Link 
+            to="/contact" 
+            className="bg-primary text-white px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium shadow-md hover:shadow-lg"
           >
-            {theme === 'light' ? (
-              <Moon className="lucide lucide-moon" />
-            ) : (
-              <Sun className="lucide lucide-sun" />
-            )}
-          </button>
-          <Link to={'/contact'} className="bg-[#0056D2] text-white px-4 py-2  hover:bg-blue-700 transition duration-300">Contact Us</Link>
+            Contact Us
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+        <div className="md:hidden flex items-center space-x-3">
+          <div className="relative">
+            <button 
+              onClick={() => setShowLanguagePopup(!showLanguagePopup)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              aria-label="Change language"
+            >
+              <Globe size={20} className="text-gray-700" />
+            </button>
+            {showLanguagePopup && (
+              <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg z-50 border border-gray-200 overflow-hidden animate-fadeIn">
+                <button
+                  onClick={() => handleLanguageChange('en')}
+                  className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
+                    language === 'en' 
+                      ? 'bg-primary/10 text-primary font-medium' 
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('fr')}
+                  className={`block w-full text-left px-4 py-3 transition-colors duration-200 ${
+                    language === 'fr' 
+                      ? 'bg-primary/10 text-primary font-medium' 
+                      : 'text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Français
+                </button>
+              </div>
+            )}
+          </div>
+          
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            aria-label="Toggle menu"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#f5f7fa] z-50">
-          <Link to="/" className="block text-text px-4 py-2 hover:bg-gray-200" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/products" className="block text-text px-4 py-2 hover:bg-gray-200" onClick={() => setIsOpen(false)}>Products</Link>
-          <Link to="/services" className="block text-text px-4 py-2 hover:bg-gray-200" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link to="/blog" className="block text-text px-4 py-2 hover:bg-gray-200" onClick={() => setIsOpen(false)}>Blog</Link>
-          <Link to="/about" className="block text-text px-4 py-2 hover:bg-gray-200" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link to="/contact" className="block bg-[#0056D2] text-white px-4 py-2  hover:bg-blue-700 mt-2 mx-4" onClick={() => setIsOpen(false)}>Contact Us</Link>
+      <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-40 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-4 py-3 space-y-1">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                location.pathname === item.path 
+                  ? 'bg-primary/10 text-primary' 
+                  : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link 
+            to="/contact" 
+            className="block bg-primary text-white px-4 py-3 rounded-lg text-center font-medium mt-2 hover:bg-primary/90 transition-colors duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact Us
+          </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

@@ -25,7 +25,7 @@ const ContactUsPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center bg-gradient-to-br from-primary via-primary/90 to-secondary rounded-b-[4rem] shadow-2xl overflow-hidden min-h-[40vh] mb-20 py-16">
         <div className="absolute inset-0 bg-black/20 z-0"></div>
@@ -207,7 +207,7 @@ const ContactUsPage: React.FC = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-4 px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
                   Send Message
                 </button>

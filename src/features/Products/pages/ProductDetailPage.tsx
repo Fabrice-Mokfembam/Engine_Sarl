@@ -7,7 +7,7 @@ const ProductDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const product = products.find(p => p.id === Number(id));
   const [currentImage, setCurrentImage] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+ 
 
   // Sample product images for demonstration
   const productImages = [
@@ -41,7 +41,7 @@ const ProductDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section with Video Background */}
       <section className="relative h-96 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -71,13 +71,13 @@ const ProductDetailPage: React.FC = () => {
             <div className="mt-8 flex justify-center gap-4">
               <Link 
                 to="/products" 
-                className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300"
+                className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 shadow-lg transition-all duration-300"
               >
                 View All Products
               </Link>
               <a 
                 href="#product-info" 
-                className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300"
+                className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 shadow-lg transition-all duration-300"
               >
                 Product Details
               </a>

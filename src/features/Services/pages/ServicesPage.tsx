@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-[80px]">
       {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center bg-gradient-to-br from-primary via-primary/90 to-secondary rounded-b-[4rem] shadow-2xl overflow-hidden min-h-[50vh] mb-20 py-16">
         <div className="absolute inset-0 bg-black/20 z-0"></div>
@@ -14,13 +14,13 @@ const ServicesPage: React.FC = () => {
             Premium engine oil products complemented by exceptional services tailored to your needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#oil-service" className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+            <a href="#oil-service" className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 shadow-lg transition-all duration-300 transform hover:scale-105">
               Oil Services
             </a>
-            <a href="#distribution" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+            <a href="#distribution" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 shadow-lg transition-all duration-300 transform hover:scale-105">
               Distribution
             </a>
-            <a href="#contact" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+            <a href="#contact" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-3 px-6 shadow-lg transition-all duration-300 transform hover:scale-105">
               Contact Us
             </a>
           </div>
@@ -80,7 +80,7 @@ const ServicesPage: React.FC = () => {
                   <span className="text-gray-800">Available at our service centers</span>
                 </li>
               </ul>
-              <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 shadow-lg transition-all duration-300 transform hover:scale-105">
                 Book an Appointment
               </button>
             </div>
@@ -170,7 +170,7 @@ const ServicesPage: React.FC = () => {
                   <span className="text-gray-800">Opportunity to grow with a leading brand</span>
                 </li>
               </ul>
-              <button className="bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+              <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 shadow-lg transition-all duration-300 transform hover:scale-105">
                 Become a Distributor
               </button>
             </div>

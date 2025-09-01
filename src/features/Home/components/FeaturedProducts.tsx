@@ -10,7 +10,7 @@ const FeaturedProducts: React.FC = () => {
             <p className="text-xl text-gray-600">Engineered for peak performance and ultimate protection in African conditions</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Product 1 */}
             <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group border-l-4 border-secondary">
               <div className="w-40 h-40 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-500 group-hover:scale-105 transition-transform duration-300">
@@ -48,7 +48,7 @@ const FeaturedProducts: React.FC = () => {
             </div>
             
             {/* Product 4 */}
-            <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group border-l-4 border-secondary">
+            {/* <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 group border-l-4 border-secondary">
               <div className="w-40 h-40 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-500 group-hover:scale-105 transition-transform duration-300">
                 <span className="text-lg font-bold">0W 20</span>
               </div>
@@ -57,7 +57,7 @@ const FeaturedProducts: React.FC = () => {
               <Link to="/products/0w-20" className="text-secondary font-semibold hover:underline mt-auto">
                 Learn More →
               </Link>
-            </div>
+            </div> */}
           </div>
           
           <div className="text-center mt-12">
