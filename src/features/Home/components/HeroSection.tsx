@@ -1,34 +1,68 @@
-import React from 'react';
-import { bannerImage3 } from '../../../assets/images';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { video1, video3 } from '../../../assets/videos';
 
 
 
 
 
 const HeroSection: React.FC = () => {
+  const [currentVideo, setCurrentVideo] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => (prev === 1 ? 2 : 1));
+    }, 10000); // Switch every 10 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section
-      className="relative h-[89vh] w-full bg-cover bg-center flex items-center justify-center text-white"
-      style={{ backgroundImage: `url(${bannerImage3})` }}
-    >
-      <div className="absolute inset-0 bg-black/50"></div>
+    <section className="relative h-[89vh] w-full flex items-center justify-center text-white overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          key={`video1-${currentVideo === 1 ? 'visible' : 'hidden'}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+            currentVideo === 1 ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <source src={video1} type="video/webm" />
+        </video>
+        <video
+          key={`video2-${currentVideo === 2 ? 'visible' : 'hidden'}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
+            currentVideo === 2 ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <source src={video3} type="video/webm" />
+        </video>
+      </div>
+      <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white text-shadow-lg leading-tight">
-           Cameroon's Number <span className="text-primary">One </span> for Engine <span className='text-primary'> Oil Excellence</span>
+             <div className="z-10 text-center px-6 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            Power Your Journey with <span className="text-secondary">Engine SARL</span>
           </h1>
-          <p className="text-base sm:text-lg text-white leading-relaxed">
-           Delivering peak performance and durability for all mechanical engines, meeting diverse needs across Cameroon.
+          <p className="text-xl md:text-2xl text-white/95 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+            Premium Engine Oils for Peak Performance in Cameroonian Conditions
           </p>
-          <p className="text-lg sm:text-xl font-semibold text-white leading-relaxed mt-4">
-           We Manufacture. We Sell. We Distribute.
-          </p>
-          <div className="mt-20 flex justify-center space-x-6">
-            <button className="bg-[#0056D2] hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg">
-              Browse Products
-            </button>
-            <button className="bg-[#D72638] hover:bg-red-700 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg">
-              Browse Services
-            </button>
+         
+        </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/products" className="bg-primary hover:bg-primary/90 text-white font-bold py-5 px-10  shadow-lg transition-all duration-300 transform hover:scale-105">
+              Explore Products
+            </Link>
+            <Link to="/contact" className="bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm font-bold py-5 px-10 shadow-lg transition-all duration-300 transform hover:scale-105">
+              Contact Us Now
+            </Link>
           </div>
         </div>
       
@@ -37,3 +71,5 @@ const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
+
+
